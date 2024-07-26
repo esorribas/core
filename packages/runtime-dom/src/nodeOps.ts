@@ -13,7 +13,7 @@ export const nodeOps: Omit<RendererOptions<Node, Element>, 'patchProp'> = {
   },
 
   remove: child => {
-    const parent = child.parentNode
+    const parent = child?.parentNode
     if (parent) {
       parent.removeChild(child)
     }
